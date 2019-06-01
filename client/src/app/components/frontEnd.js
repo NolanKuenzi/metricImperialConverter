@@ -46,6 +46,7 @@ class FrontEnd extends React.Component {
   render() {
     return (
       <div data-testid="frontEndDiv" id="frontEndSection">
+        <div id="frontEndContent">
           <h2>Front-End:</h2>
           <div>
             <input id="input" type="text" placeholder="3.1mi" name="input" />
@@ -54,6 +55,7 @@ class FrontEnd extends React.Component {
         <div>
           <p id="serverString" data-testid="serverStringTest">{this.state.serverString}</p>
           <p id="serverData" data-testid="serverDataTest">{this.state.serverData}</p>
+        </div>
         </div>
       </div>
      );
