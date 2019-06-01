@@ -7,7 +7,7 @@
 	"description": "metricImperialConverter",
 	"main": "server.js",
 	"scripts": {
-		"start": "nodemon server.js",
+		"start": "node server.js",
 		"test": "node ./node_modules/mocha/bin/mocha"
 	},
 	"dependencies": {
