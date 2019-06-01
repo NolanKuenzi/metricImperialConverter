@@ -17,7 +17,7 @@ class FrontEnd extends React.Component {
       try {
         if (/[^-+/*0-9.a-zA-Z\s]/.test(inputVal.value) === true) {
           const newVal = inputVal.value.replace(/[^-+/*0-9.a-zA-Z]/g, 'IC');
-          const url0 = new URL('http://localhost:3000/api/convert?'+ 'input=' + newVal);
+          const url0 = new URL('https://whispering-bayou-48878.herokuapp.com/api/convert?'+ 'input=' + newVal);
           const response = await axios.get(url0);
           this.setState({
             serverString: response.data.string,
@@ -31,7 +31,7 @@ class FrontEnd extends React.Component {
           changedPlus = inputVal.value.replace(/\+/g, 'plusSign');
           plusSignStatus = true;
         }
-        const url1 = new URL('http://localhost:3000/api/convert?'+ 'input=' + (plusSignStatus === true ? changedPlus : inputVal.value));
+        const url1 = new URL('https://whispering-bayou-48878.herokuapp.com/api/convert?'+ 'input=' + (plusSignStatus === true ? changedPlus : inputVal.value));
         const response = await axios.get(url1);
         this.setState({
           serverString: response.data.string,
