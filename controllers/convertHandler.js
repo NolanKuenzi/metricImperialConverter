@@ -23,6 +23,10 @@ function ConvertHandler() {
       rtrnNumb = '1';
       return rtrnNumb;
     }
+    if (/[^-+/*0-9.]/.test(rtrnNumb) === true) {
+      rtrnNumb = "Invalid Number";
+      return rtrnNumb;
+    }
     if (/[-+*/.]/.test(rtrnNumb) === true) {
       if (/\/.*\//.test(rtrnNumb) === true) {
         rtrnNumb = "Invalid Number";
