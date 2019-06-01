@@ -1,0 +1,32 @@
+# NPM packages folder.
+node_modules
+
+# Client
+
+/client/node_modules
+/client/Server
+/client/dist
+/client/src/static
+/client/.gitignore
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# node-waf configuration
+.lock-wscript
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Jest Coverage
+coverage
+
+# misc
+.DS_Store
+/altApis
+/temp

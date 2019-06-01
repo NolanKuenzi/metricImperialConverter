@@ -1,0 +1,63 @@
+body {
+    background-color: grey;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    font-size: 1.1em;
+}
+
+#exampleUsageUl {
+    position: relative;
+    left: -2em;
+}
+
+#returnSection {
+    font-size: 0.95em;
+}
+
+#frontEndSection {
+    margin-top: 1em;
+    padding-bottom: 1em;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:active {
+    background-color: black;
+    outline: none;
+    color: white;
+}
+
+input {
+    width: 17em;
+}
+
+#serverString {
+    font-size: 1.2em;
+}
+
+#serverData {
+    font-size: 0.9em;
+}
+
+#convertButton {
+    margin-left: 0.5em;
+}
+
+#footer {
+  margin-top: 2em;
+  text-align: center;
+}
