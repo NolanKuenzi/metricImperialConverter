@@ -4,7 +4,7 @@ const UserStories = () => {
   return (
     <div>
       <h1>ISQA_2 - Metric/Imp Converter</h1>
-      <div data-testid="userStoriesSection">
+      <div id="usrsStoriesSec" data-testid="userStoriesSection">
         <h3>User Stories</h3>
         <ol>
           <li>I will help prevent the client from trying to guess(sniff) the MIME type.</li>
@@ -39,7 +39,7 @@ const UserStories = () => {
           <li>All 5 functional tests are complete and passing.</li>
         </ol>
       </div>
-      <div>
+      <div id="exampleSec">
         <h3>Example Usage:</h3>
         <ul data-testid="exampleUsage" id="exampleUsageUl">
           <li>/api/convert?input=4gal</li>
@@ -47,8 +47,6 @@ const UserStories = () => {
           <li>/api/convert?input=5.4/3lbs</li>
           <li>/api/convert?input=kg</li>
         </ul>
-      </div>
-      <div>
         <h3>Example Return:</h3>
         <div data-testid="returnDiv" id="returnSection">
           {"{initNum: 3.1, initUnit: 'mi', returnNum: 5.0000008, returnUnit: 'km', "}
