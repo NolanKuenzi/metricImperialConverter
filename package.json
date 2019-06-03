@@ -8,6 +8,7 @@
 	"main": "server.js",
 	"scripts": {
 		"start": "node server.js",
+		"devStart": "nodemon server.js",
 		"test": "node ./node_modules/mocha/bin/mocha"
 	},
 	"dependencies": {
