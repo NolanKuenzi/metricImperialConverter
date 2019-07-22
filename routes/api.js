@@ -8,7 +8,7 @@
 
 const expect = require('chai').expect;
 const ConvertHandler = require('../controllers/convertHandler.js');
-const { query, sanitizeQuery } = require('express-validator');
+const { sanitizeQuery } = require('express-validator');
 
 module.exports = function (app) {
   const convertHandler = new ConvertHandler();
