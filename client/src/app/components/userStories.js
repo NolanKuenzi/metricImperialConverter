@@ -1,11 +1,10 @@
 import React from 'react';
+import Footer from './footer';
 
 const UserStories = () => {
   return (
     <div>
-      <h1>ISQA_2 - Metric/Imp Converter</h1>
       <div id="usrsStoriesSec" data-testid="userStoriesSection">
-        <h3>User Stories</h3>
         <ol>
           <li>I will help prevent the client from trying to guess(sniff) the MIME type.</li>
           <li>I will prevent cross-site scripting (XSS) attacks.</li>
@@ -53,6 +52,7 @@ const UserStories = () => {
           {"string: '3.1 miles converts to 5.00002 kilometers'}"}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

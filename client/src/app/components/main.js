@@ -1,16 +1,11 @@
 import React from 'react';
-import UserStories from './userStories';
-import FrontEnd from './frontEnd';
-import Footer from './footer';
+import Converter from '../containers/converter';
 
 const Main = () => {
   return (
     <div>
-      <UserStories />
-      <FrontEnd />
-      <Footer />
+      <Converter />
     </div>
   );
 };
-
 export default Main;

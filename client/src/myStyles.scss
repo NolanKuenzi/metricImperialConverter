@@ -1,75 +1,129 @@
 body {
-    background-color: grey;
+    background-color: silver;
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 1em;
+    text-decoration: underline;
 }
 
-#usrsStoriesSec {
-  margin-left: 2em;
+#dataSection {
+    margin-top: 10%;
+    text-align: center;
 }
 
-#exampleSec {
-  margin-left: 2em;
-}
-
-ul {
-    list-style-type: none;
-}
-
-li {
+.units {
     font-size: 1.1em;
 }
 
-#exampleUsageUl {
-    position: relative;
-    margin-left: -2em;
+table {
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#returnSection {
-    font-size: 0.95em;
+th {
+    font-size: 1.1em;
 }
 
-#frontEndSection {
-    margin-top: 1em;
-    padding-bottom: 1em;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+.num {
+    border: 2px solid black;
+    text-align: center;
+    height: 1.5em;
+    width: 13em;
+}
+ 
+ .unit {
+     border: 2px solid black;
+     text-align: center;
+     height: 1.5em;
+     width: 8em;
 }
 
-#frontEndContent {
-    margin-left: 1.5em;
+input {
+    width: 13em;
+    height: 1.5em;
+    border: 2px solid black;
+    font-size: 1em;
 }
 
+ #inputSection {
+    text-align: center;
+}
+ 
 button {
+    margin-top: 1em;
     cursor: pointer;
+    font-size: 1em;
+    background-color: silver;
+    outline: none;
+    border: 2px solid black;
 }
 
 button:active {
     background-color: black;
     outline: none;
     color: white;
+    outline: none;
+    transform: translateY(0.3em);
 }
 
-input {
-    width: 17em;
+#dataString {
+    font-size: 1.5em;
 }
 
-#serverString {
-    font-size: 1.2em;
+#returnSection {
+   font-size: 0.95em;
 }
 
-#serverData {
-    font-size: 0.9em;
+#userStories {
+    margin-top: 1em;
+    text-align: center;
+    margin-top: 5em;
 }
 
-#convertButton {
-    margin-left: 0.5em;
+#usrStriesHandler {
+    padding: 0.3em;
+    width: 16em;
+    border: 2px solid black;
+    text-align: center;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1em;
+    margin-bottom: 2em;
 }
+
+#arrowSpan {
+    font-size: 0.6em;
+}
+
+
+ol {
+  list-style-position: inside;
+  width: 35em;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ol li {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    font-size: 1.1em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin-right: 3em;
+}
+
 
 #footer {
-  margin-top: 2em;
+  margin-top: 3em;
   text-align: center;
 }

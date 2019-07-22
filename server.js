@@ -8,11 +8,12 @@ const fccTestingRoutes = require('./routes/fcctesting.js');
 const runner = require('./test-runner');
 const helmet = require('helmet');
 const apiRoutes = require('./routes/api.js');
+const path = require('path');
 
 const app = express();
 
 app.use(helmet());
-app.use('/public', express.static(process.cwd() + '/public'));
+app.use(express.static(path.join(__dirname,'public')));
 app.use(cors({origin: '*'})); //For FCC testing purposes only
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, cleanup } from 'react-testing-library';
-import UserStories from './userStories';
+import UserStories from '../components/userStories';
 
 afterEach(cleanup);
 

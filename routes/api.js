@@ -8,15 +8,21 @@
 
 const expect = require('chai').expect;
 const ConvertHandler = require('../controllers/convertHandler.js');
+const { sanitizeQuery } = require('express-validator');
 
 module.exports = function (app) {
   const convertHandler = new ConvertHandler();
   app.route('/api/convert?')
-    .get(function (req, res) {
+    .get([
+      sanitizeQuery('input')
+        .escape(),
+    ],
+    function (req, res) {
+      console.log(req.query);
       const input = req.query.input;
       const initNum = convertHandler.getNum(input);
       const initUnit = convertHandler.getUnit(input);
-     if (initNum === 'Invalid Number' && initUnit === 'Invalid Unit')  {
+      if (initNum === 'Invalid Number' && initUnit === 'Invalid Unit')  {
         res.json({string: 'Invalid Number and Unit'});
         return;
       }

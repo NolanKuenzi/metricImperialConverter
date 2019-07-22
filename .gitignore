@@ -4,7 +4,7 @@ node_modules
 # Client
 
 /client/node_modules
-/client/Server
+/client/server
 /client/dist
 /client/src/static
 /client/.gitignore
