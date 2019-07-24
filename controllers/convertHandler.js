@@ -9,7 +9,6 @@ const math = require('mathjs');
 function ConvertHandler() {
   
   this.getNum = function(input) {
-    input = input.replace(/plusSign/g, '+');
     let lastDigitCounter;
     let getLastDigit = input.split("");
     for (let i = 0; i < getLastDigit.length; i++) {

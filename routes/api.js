@@ -8,13 +8,13 @@
 
 const expect = require('chai').expect;
 const ConvertHandler = require('../controllers/convertHandler.js');
-const { sanitizeQuery } = require('express-validator');
+const { query, sanitizeQuery } = require('express-validator');
 
 module.exports = function (app) {
   const convertHandler = new ConvertHandler();
   app.route('/api/convert?')
     .get([
-      sanitizeQuery('input')
+       sanitizeQuery('input')
         .customSanitizer(function(input) {
           input = input.replace(/\s/g, "");
           return escape(input);

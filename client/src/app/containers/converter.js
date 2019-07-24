@@ -29,27 +29,10 @@ class Converter extends React.Component {
         });
       };
       try {
-        if (/[^-+/*0-9.a-zA-Z\s]/.test(inputVal.value) === true) {
-          const newVal = inputVal.value.replace(/[^-+/*0-9.a-zA-Z]/g, 'IC');
-          const url0 = new URL(
-            `${'https://whispering-bayou-48878.herokuapp.com/api/convert?input='}${newVal}`,
-          );
-          const response = await axios.get(url0);
-          const responseData = response.data.initNum === undefined ? null : response.data;
-          setData(response.data.string, responseData);
-        }
-        let plusSignStatus = false;
-        let changedPlus;
-        if (/\+/.test(inputVal.value) === true) {
-          changedPlus = inputVal.value.replace(/\+/g, 'plusSign');
-          plusSignStatus = true;
-        }
-        const url1 = new URL(
-          `${'https://whispering-bayou-48878.herokuapp.com/api/convert?input='}${
-            plusSignStatus === true ? changedPlus : inputVal.value
-          }`,
+        const url = new URL(
+          `http://localhost:3000/api/convert?input=${encodeURIComponent(inputVal.value)}`,
         );
-        const response = await axios.get(url1);
+        const response = await axios.get(url);
         const responseData = response.data.initNum === undefined ? null : response.data;
         setData(response.data.string, responseData);
       } catch (error) {
