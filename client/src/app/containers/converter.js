@@ -30,7 +30,7 @@ class Converter extends React.Component {
       };
       try {
         const url = new URL(
-          `http://localhost:3000/api/convert?input=${encodeURIComponent(inputVal.value)}`,
+          `https://whispering-bayou-48878.herokuapp.com/api/convert?input=${encodeURIComponent(inputVal.value)}`,
         );
         const response = await axios.get(url);
         const responseData = response.data.initNum === undefined ? null : response.data;
