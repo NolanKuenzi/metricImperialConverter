@@ -38,7 +38,6 @@ class Converter extends React.Component {
         const responseData = response.data.initNum === undefined ? null : response.data;
         setData(response.data.string, responseData);
       } catch (error) {
-        console.log(error);
         setData(error.response.data.string, null);
       }
     };
