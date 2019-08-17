@@ -38,7 +38,6 @@ function ConvertHandler() {
     try {
       rtrnNumb = math.eval(rtrnNumb).toString();
     } catch(err) {
-      console.log(err);
       rtrnNumb = "Invalid Number";
       return rtrnNumb;
     }
