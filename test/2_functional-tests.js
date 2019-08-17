@@ -49,7 +49,7 @@ describe('Functional Tests', function() {
         .get('/api/convert?')
         .query({input: '3/7.2/4kg'})
         .end(function(err, res) {
-          assert.equal(res.status, 200);
+          assert.equal(res.status, 500);
           assert.equal(res.body.string, 'Invalid Number');
           done();
         });
@@ -60,7 +60,7 @@ describe('Functional Tests', function() {
         .get('/api/convert?')
         .query({input: '3/7.2/4kz'})
         .end(function(err, res) {
-          assert.equal(res.status, 200);
+          assert.equal(res.status, 500);
           assert.equal(res.body.string, 'Invalid Number and Unit');
           done();
         });
@@ -71,7 +71,7 @@ describe('Functional Tests', function() {
         .get('/api/convert?')
         .query({input: 'kg'})
         .end(function(err, res) {
-        assert.equal(res.status, 200);
+        assert.equal(res.status, 500);
         assert.equal(res.body.initNum, 1);
         assert.equal(res.body.initUnit, 'kg');
         assert.approximately(res.body.returnNum, 2.20462, 0.1);

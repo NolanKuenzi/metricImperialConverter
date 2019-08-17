@@ -25,15 +25,15 @@ module.exports = function (app) {
       const initNum = convertHandler.getNum(input);
       const initUnit = convertHandler.getUnit(input);
       if (initNum === 'Invalid Number' && initUnit === 'Invalid Unit')  {
-        res.status(200).json({string: 'Invalid Number and Unit'});
+        res.status(500).json({string: 'Invalid Number and Unit'});
         return;
       }
       if (initUnit === 'Invalid Unit') {
-        res.status(200).json({string: 'Invalid Unit'});
+        res.status(500).json({string: 'Invalid Unit'});
         return;
       }
       if (initNum === 'Invalid Number') {
-        res.status(200).json({string: 'Invalid Number'});
+        res.status(500).json({string: 'Invalid Number'});
         return;
       }
       const returnNum = convertHandler.convert(initNum, initUnit);
