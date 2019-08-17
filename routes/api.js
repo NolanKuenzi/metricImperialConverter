@@ -25,20 +25,20 @@ module.exports = function (app) {
       const initNum = convertHandler.getNum(input);
       const initUnit = convertHandler.getUnit(input);
       if (initNum === 'Invalid Number' && initUnit === 'Invalid Unit')  {
-        res.json({string: 'Invalid Number and Unit'});
+        res.status(400).json({string: 'Invalid Number and Unit'});
         return;
       }
       if (initUnit === 'Invalid Unit') {
-        res.json({string: 'Invalid Unit'});
+        res.status(400).json({string: 'Invalid Unit'});
         return;
       }
       if (initNum === 'Invalid Number') {
-        res.json({string: 'Invalid Number'});
+        res.status(400).json({string: 'Invalid Number'});
         return;
       }
       const returnNum = convertHandler.convert(initNum, initUnit);
       const returnUnit = convertHandler.getReturnUnit(initUnit);
       const toString = convertHandler.getString(initNum, initUnit, returnNum, returnUnit);
-      res.json({initNum: JSON.parse(initNum), initUnit: initUnit, returnNum: returnNum, returnUnit: returnUnit, string: toString});
+      res.status(200).json({initNum: JSON.parse(initNum), initUnit: initUnit, returnNum: returnNum, returnUnit: returnUnit, string: toString});
     });
 };
