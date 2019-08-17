@@ -39,6 +39,7 @@ class Converter extends React.Component {
         setData(response.data.string, responseData);
       } catch (error) {
         console.log(error);
+        setData(error.response.data.string, null);
       }
     };
     makeReq();
