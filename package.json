@@ -19,7 +19,7 @@
 		"express": "^4.17.1",
 		"express-validator": "^6.1.1",
 		"helmet": "^3.19.0",
-		"mathjs": "^5.10.3",
+		"mathjs": "^7.5.1",
 		"mocha": "^6.1.4",
 		"mongodb": "^2.2.16",
 		"zombie": "^6.1.4"
