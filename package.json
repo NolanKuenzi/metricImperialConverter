@@ -20,7 +20,7 @@
 		"express-validator": "^6.1.1",
 		"helmet": "^3.19.0",
 		"mathjs": "^5.10.3",
-		"mocha": "^6.1.4",
+		"mocha": "^10.2.0",
 		"mongodb": "^2.2.16",
 		"zombie": "^6.1.4"
 	},
